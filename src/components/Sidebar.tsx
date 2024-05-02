@@ -113,11 +113,11 @@ export const Sidebar = (props: SidebarProps) => {
 
     return (
         <nav
-            className={`bg-slate-900 overflow-auto flex flex-col justify-between ${
+            className={`bg-black overflow-auto flex flex-col justify-between ${
                 expand ? "block" : "hidden"
             }`}
         >
-            <div className="sticky top-0 bg-slate-900 py-4 flex justify-center items-center font-semibold text-gray-100 border-b border-gray-400">
+            <div className="sticky top-0 bg-black py-4 flex justify-center items-center font-semibold text-gray-100 border-b border-gray-400">
                 <span>{title}</span>
             </div>
             {!Object.values(sessionsCategory)
@@ -288,7 +288,7 @@ export const Sidebar = (props: SidebarProps) => {
                     {t("components.Sidebar.no_history_chat")}
                 </div>
             )}
-            <div className="sticky bottom-0 bg-slate-900 py-1 flex justify-center items-center text-xs text-gray-100 border-gray-400 border-t">
+            <div className="sticky bottom-0 bg-black py-1 flex justify-center items-center text-xs text-gray-100 border-gray-400 border-t">
                 <select
                     className="text-gray-300/50 text-center bg-transparent w-full outline-none m-1"
                     onChange={({ target }) => onSwitchLocale(target.value)}
