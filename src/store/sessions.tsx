@@ -4,6 +4,7 @@ import { createSlice } from "@reduxjs/toolkit";
 export interface SessionHistory {
     readonly role: string;
     readonly parts: string;
+    readonly contexts: string;
     readonly timestamp: number;
     readonly attachment?: GenerativeContentBlob;
     readonly title?: string;
