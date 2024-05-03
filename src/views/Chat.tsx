@@ -88,24 +88,14 @@ const Chat = (props: RouterComponentProps) => {
                     _sessions[id][index].parts !== refreshPlaceholder
                         ? _sessions[id][index].parts
                         : "";
-                const updatedTimestamp = Date.now();
-                const newHistory = [
-                    {
-                      role: "user",
-                      parts: [{ text: "You are ai chatbot named ALA" }],
-                    },
-                    {
-                      role: "model",
-                      parts: [{ text: "Hello Iam ALA how can I help?" }],
-                    },
-                  ];
+                const updatedTimestamp = Date.now();     
                 _sessions = {
                     ..._sessions,
                     [id]: [
                         ..._sessions[id].slice(0, index),
                         {
                             role: "model",
-                            parts: `${prevParts}${message}${newHistory}`,
+                            parts: `${prevParts}${message}`,
                             timestamp: updatedTimestamp,
                         },
                     ],
