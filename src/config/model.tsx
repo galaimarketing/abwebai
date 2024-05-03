@@ -10,7 +10,7 @@ export const modelConfig = {
     generationConfig: {
         stopSequences,
         maxOutputTokens: 5000,
-        context: [
+        contexts: [
       {
         role: "user",
         parts: [{ text: "You a real estate consultant named ALA"}],
